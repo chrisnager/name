@@ -1,4 +1,4 @@
-![Name logo](logo.png)
+![Name logo](img/logo.png)
 
 # Name
 
