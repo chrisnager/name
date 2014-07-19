@@ -7,7 +7,7 @@
         <meta name="description" content="Show off your name">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="apple-mobile-web-app-title" content="Name">
 
         <style>
@@ -17,26 +17,26 @@
 
             html,
             input {
-                border-color: #fff;
-                color: #fff;
-                fill: #fff;
+                border-color: #ccc;
+                color: #ccc;
+                fill: #ccc;
                 background-color: #000;
             }
 
             ::-webkit-input-placeholder {
-                color: #fff;
+                color: #ccc;
             }
 
             :-moz-placeholder {
-                color: #fff;
+                color: #ccc;
             }
 
             ::-moz-placeholder {
-                color: #fff;
+                color: #ccc;
             }
 
             :-ms-input-placeholder {
-                color: #fff;
+                color: #ccc;
             }
 
             html {
@@ -89,6 +89,11 @@
                 position: absolute;
                 bottom: 0;
                 word-wrap: break-word;
+                color: #fff;
+            }
+
+            .light .name {
+                color: #000;
             }
 
             .controls {
@@ -122,17 +127,19 @@
                 appearance: none;
             }
 
+            .controls__input:focus {
+                outline: 0;
+            }
+
             .controls__toggle {
                 width: 60px;
                 height: 60px;
-                border: 3px solid;
                 border-radius: 5em;
                 padding: 10px;
                 text-align: center;
                 cursor: pointer;
                 vertical-align: top;
                 display: inline-block;
-                background-color: #2ECC40;
             }
 
             .controls__input-wrapper,
