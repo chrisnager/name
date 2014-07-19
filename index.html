@@ -222,7 +222,7 @@
             window.onload = a();
 
             // Disable bounce scrolling
-            document.getElementById( 'n' ).ontouchstart = function( e ) { 
+            document.ontouchmove = function( e ) { 
                 e.preventDefault(); 
             }
         </script>
