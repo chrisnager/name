@@ -220,6 +220,9 @@
             document.getElementById( 't' ).addEventListener( 'click', t, false );
             document.getElementById( 'n' ).addEventListener( 'click', s, false );
             window.onload = a();
+            document.ontouchstart = function( e ) { 
+                e.preventDefault(); 
+            }
         </script>
 
         <!-- TODO: Google Analytics: change UA-XXXXX-X to be your site's ID. -->
