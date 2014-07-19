@@ -19,11 +19,18 @@
             input {
                 border-color: #ccc;
                 color: #ccc;
+            }
+
+            html {
                 fill: #ccc;
-                background-color: #fff;
+                background-color: #ff0;
             }
 
             body {
+                background-color: #000;
+            }
+
+            input {
                 background-color: #000;
             }
 
@@ -49,36 +56,49 @@
                 letter-spacing: -0.025em;
                 text-transform: uppercase;
                 text-rendering: optimizeLegibility;
-                -webkit-transition: color 200ms, fill 200ms, background-color 200ms;
-                transition: color 200ms, fill 200ms, background-color 200ms;
                 -moz-user-select: none;
                 -webkit-user-select: none;
                 -ms-user-select: none;
                 -webkit-tap-highlight-color: transparent;
             }
 
+            body {
+                -webkit-transition: color 200ms, fill 200ms, background-color 200ms;
+                transition: color 200ms, fill 200ms, background-color 200ms;
+            }
+
             .light,
             .light input {
-                border-color: #000;
-                color: #000;
-                fill: #000;
+                border-color: #555;
+                color: #555;
+            }
+
+            .light {
+                fill: #555;
+            }
+
+            .light input {
+                background-color: #fff;
+            }
+
+            .light > body {
                 background-color: #fff;
             }
 
             .light ::-webkit-input-placeholder {
-                color: #000;
+                color: #555;
             }
 
             .light :-moz-placeholder {
-                color: #000;
+                color: #555;
             }
 
             .light ::-moz-placeholder {
-                color: #000;
+                color: #555;
             }
 
             .light :-ms-input-placeholder {
-                color: #000;
+                color: #555;
             }
 
             body {
@@ -93,6 +113,7 @@
                 position: absolute;
                 bottom: 0;
                 word-wrap: break-word;
+                cursor: pointer;
                 color: #fff;
             }
 
@@ -186,8 +207,15 @@
 
             // Toggle themes
             function t() {
+                var statusBar = document.querySelector( 'meta[name="apple-mobile-web-app-status-bar-style"]' );
                 document.getElementsByTagName( 'html' )[0].classList.toggle( 'light' );
-            }
+
+                if ( statusBar.getAttribute( 'content' ) === 'black-translucent' ) {
+                    statusBar.setAttribute( 'content', 'black' );
+                } else {
+                    statusBar.setAttribute( 'content', 'black-translucent' );
+                }
+             }
 
             // Apply locally stored name on load
             function a() {
