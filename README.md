@@ -1,6 +1,8 @@
+![Name logo](logo.png)
+
 # Name
 
-It's _your_ name, let others know it!
+Show off your name
 
 ## License
 
