@@ -87,9 +87,8 @@ body {
 .name {
     width: 20%;
     display: inline-block;
-    -webkit-transform: scale(5);
-        -ms-transform: scale(5);
-            transform: scale(5);
+    -webkit-transform: scale(5) translateZ(0);
+            transform: scale(5) translateZ(0);
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0;
