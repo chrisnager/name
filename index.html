@@ -179,6 +179,7 @@
         </div>
         <div class="name" id="n"></div>
 
+        <script type="application/javascript" src="js/fastclick.js"></script>
         <script>
             // Bind input to div
             function c() {
@@ -207,12 +208,20 @@
             // Toggle controls
             function s() {
                 document.getElementById( 's' ).classList.toggle( 'is-hidden' );
+                console.log( 'click to toggle controls' );
             }
 
+            // Event listeners
             document.getElementById( 'v' ).addEventListener( 'input', c, false );
             document.getElementById( 't' ).addEventListener( 'click', t, false );
             document.getElementById( 'n' ).addEventListener( 'click', s, false );
+            document.getElementsByClassName( 'is-hidden' ).addEventListener( 'click', s, false );
             window.onload = a();
+
+            // Enable fastclick
+            window.addEventListener( 'load', function() {
+                FastClick.attach( document.body );
+            }, false );
 
             // Disable bounce scrolling
             document.ontouchmove = function( e ) { 
