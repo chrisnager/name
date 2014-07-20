@@ -1,0 +1,149 @@
+::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+input {
+    border-color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.75);
+    background-color: #2ECC40;
+}
+
+html {
+    height: 100%;
+    font: 900 100%/0.9 Avenir, "Helvetica Neue", sans-serif;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    user-select: none;
+    tap-highlight-color: transparent;
+    transition: color 100ms, fill 100ms, background-color 100ms;
+    fill: rgba(255, 255, 255, 0.75);
+}
+
+.light,
+.light input {
+    border-color: #aaa;
+    color: #aaa;
+    background-color: #fff;
+}
+
+.light {
+    fill: #2ECC40;
+}
+
+.light ::-webkit-input-placeholder {
+    color: #aaa;
+}
+
+.light :-moz-placeholder {
+    color: #aaa;
+}
+
+.light ::-moz-placeholder {
+    color: #aaa;
+}
+
+.light :-ms-input-placeholder {
+    color: #aaa;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.name-wrapper {
+    width: 100%;
+    height: calc(100% - 120px);
+    padding: 0 10px;
+    word-wrap: break-word;
+    cursor: pointer;
+    color: #fff;
+}
+
+.name {
+    width: 20%;
+    display: inline-block;
+    transform: scale(5);
+    transform-origin: 0 0;
+}
+
+.light .name-wrapper {
+    color: #000;
+}
+
+.controls {
+    width: 100%;
+    height: 120px;
+    padding: 34px 10px 0;
+    display: table;
+    table-layout: fixed;
+    transition: opacity 100ms ease-in-out;
+}
+
+.is-hidden {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.is-hidden > .controls__input-wrapper,
+.is-hidden > .controls__toggle-wrapper {
+    pointer-events: none;
+}
+
+.controls__input {
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    border: 3px solid;
+    border-radius: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none
+    appearance: none;
+}
+
+.controls__input:focus {no
+    outline: 0;
+}
+
+.controls__toggle {
+    width: 60px;
+    height: 60px;
+    padding: 3px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.controls__input-wrapper,
+.controls__toggle-wrapper{
+    display: table-cell;
+}
+
+.controls__toggle-wrapper {
+    width: 70px;
+    padding-left: 10px;
+}
