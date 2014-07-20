@@ -122,6 +122,10 @@
 
             .is-hidden {
                 opacity: 0;
+            }
+
+            .is-hidden > .controls__input-wrapper,
+            .is-hidden > .controls__toggle-wrapper {
                 pointer-events: none;
             }
 
@@ -208,14 +212,20 @@
             // Toggle controls
             function s() {
                 document.getElementById( 's' ).classList.toggle( 'is-hidden' );
-                console.log( 'click to toggle controls' );
+            }
+
+            // Toggle controls
+            function x() {
+                document.getElementById( 's' ).classList.remove( 'is-hidden' );
             }
 
             // Event listeners
             document.getElementById( 'v' ).addEventListener( 'input', c, false );
             document.getElementById( 't' ).addEventListener( 'click', t, false );
             document.getElementById( 'n' ).addEventListener( 'click', s, false );
-            document.getElementsByClassName( 'is-hidden' ).addEventListener( 'click', s, false );
+            document.getElementById( 's' ).addEventListener( 'click', x, false );
+
+
             window.onload = a();
 
             // Enable fastclick
