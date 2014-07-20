@@ -29,7 +29,7 @@ input {
 
 html {
     height: 100%;
-    font: 900 2rem/0.9 Avenir, "Helvetica Neue", sans-serif, AppleColorEmoji;
+    font: 900 1.25rem/0.9 Avenir, "Helvetica Neue", sans-serif, AppleColorEmoji;
     letter-spacing: -0.025em;
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
@@ -85,14 +85,15 @@ body {
 }
 
 .name {
-    width: 40%;
+    width: 25%;
     display: inline-block;
-    -webkit-transform: scale(2.5);
-        -ms-transform: scale(2.5);
-            transform: scale(2.5);
+    -webkit-transform: scale(4);
+        -ms-transform: scale(4);
+            transform: scale(4);
     -webkit-transform-origin: 0 0;
         -ms-transform-origin: 0 0;
             transform-origin: 0 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 .light .name-wrapper {
@@ -110,12 +111,12 @@ body {
 }
 
 .is-hidden {
-    opacity: 0;
     cursor: pointer;
 }
 
 .is-hidden > .controls__input-wrapper,
 .is-hidden > .controls__toggle-wrapper {
+    visibility: hidden;
     pointer-events: none;
 }
 
