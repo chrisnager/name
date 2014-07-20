@@ -207,6 +207,7 @@
             // Apply locally stored name on load
             function a() {
                 document.getElementById( 'n' ).innerHTML = localStorage.getItem( 'name' );
+                document.getElementById( 'v' ).removeAttribute( 'autofocus' );
             }
 
             // Toggle controls
@@ -224,7 +225,6 @@
             document.getElementById( 't' ).addEventListener( 'click', t, false );
             document.getElementById( 'n' ).addEventListener( 'click', s, false );
             document.getElementById( 's' ).addEventListener( 'click', x, false );
-
 
             window.onload = a();
 
