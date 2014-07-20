@@ -125,7 +125,7 @@ body {
     appearance: none;
 }
 
-.controls__input:focus {no
+.controls__input:focus {
     outline: 0;
 }
 
