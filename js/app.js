@@ -28,7 +28,6 @@ function s() {
     document.getElementById( 's' ).classList.toggle( 'is-hidden' );
 }
 
-// Toggle controls
 function x() {
     document.getElementById( 's' ).classList.remove( 'is-hidden' );
 }
@@ -36,7 +35,7 @@ function x() {
 // Event listeners
 document.getElementById( 'v' ).addEventListener( 'input', c, false );
 document.getElementById( 't' ).addEventListener( 'click', t, false );
-document.getElementById( 'n' ).addEventListener( 'click', s, false );
+document.getElementById( 'w' ).addEventListener( 'click', s, false );
 document.getElementById( 's' ).addEventListener( 'click', x, false );
 
 window.onload = a();
