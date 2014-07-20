@@ -27,7 +27,7 @@ input {
 
 html {
     height: 100%;
-    font: 900 100%/0.9 Avenir, "Helvetica Neue", sans-serif;
+    font: 900 2rem/0.9 Avenir, "Helvetica Neue", sans-serif, AppleColorEmoji;
     letter-spacing: -0.025em;
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
@@ -79,9 +79,9 @@ body {
 }
 
 .name {
-    width: 20%;
+    width: 40%;
     display: inline-block;
-    transform: scale(5) translateZ(0);
+    transform: scale(2.5);
     transform-origin: 0 0;
 }
 
