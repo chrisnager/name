@@ -1,4 +1,4 @@
-// Bind input to div
+// Bind input to span
 function c() {
     // Store name locally
     var name = document.getElementById( 'v' ).value;
