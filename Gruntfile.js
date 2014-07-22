@@ -11,8 +11,8 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 src: [
-                    'js/fastclick.js',
-                    'js/app.js'
+                    'src/js/fastclick.js',
+                    'src/js/app.js'
                 ],
                 dest: 'build/js/app.js',
             }
@@ -21,10 +21,10 @@ module.exports = function (grunt) {
             dist: {
                 options:{
                     cssmin: true,
-                    uglify: true,
-                    tag: 'build/'
+                    uglify: true
                 },
-                src: [ 'index.html' ]
+                src: 'src/index.html',
+                dest: 'build/index.html'
             }
         },
         htmlmin: {
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    'index.html': 'src/index.html'
+                    'index.html': 'build/index.html'
                 }
             }
         },
@@ -52,5 +52,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['concat', 'inline', 'htmlmin']);
+    grunt.registerTask('default', ['autoprefixer', 'concat', 'inline', 'htmlmin']);
 };
