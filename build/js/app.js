@@ -817,7 +817,7 @@ if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) 
     window.FastClick = FastClick;
 }
 
-// Bind input to div
+// Bind input to span
 function c() {
     // Store name locally
     var name = document.getElementById( 'v' ).value;
