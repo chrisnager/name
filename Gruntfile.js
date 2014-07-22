@@ -4,14 +4,7 @@ module.exports = function (grunt) {
         autoprefixer: {
             dist: {
                 files: {
-                    'build/css/app.css': 'css/app.css'
-                }
-            }
-        },
-        cssmin: {
-            combine: {
-                files: {
-                    'build/css/app.min.css': 'build/css/app.css'
+                    'build/css/app.css': 'src/css/app.css'
                 }
             }
         },
@@ -24,24 +17,40 @@ module.exports = function (grunt) {
                 dest: 'build/js/app.js',
             }
         },
-        uglify: {
-            build: {
-                src: 'build/js/app.js',
-                dest: 'build/js/app.min.js'
+        inline: {
+            dist: {
+                options:{
+                    cssmin: true,
+                    uglify: true,
+                    tag: 'build/'
+                },
+                src: [ 'index.html' ]
+            }
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'index.html': 'src/index.html'
+                }
             }
         },
         watch: {
             styles: {
-                files: ['css/app.css'],
+                files: ['src/css/app.css'],
                 tasks: ['autoprefixer']
             }
         }
     });
+
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-inline');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['cssmin', 'concat', 'uglify']);
+    grunt.registerTask('default', ['concat', 'inline', 'htmlmin']);
 };
